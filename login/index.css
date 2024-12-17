@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+:root {
+  --main_bgColor: #2f224d;
+  --form_bgColor: #2f224d;
+  --white_color:#fff
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background-image: url("./assets/wep/background.svg"),
+    linear-gradient(rgba(21, 10, 49, 0.95), rgba(76, 53, 133, 0.95)),
+    url("./assets/wep/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  background-position: center, center !important;
+}
+.login-container .login-inputs{
+  background-color: var(--form_bgColor);
+  color: var(--white_color);
+  width: 54%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 18px 50px;
+}
+.login-container .login-inputs .login-title {
+  font-size: 43px;
+}
+.login-container .login-inputs .login-form {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  flex-direction: inherit;
+  padding: 30px;
+  background-color: #c5c1cd;
+  width: 100%;
+  border-radius: 10px;
+  color: var(--form_bgColor);
+  margin-block: 20px;
+}
+.login-container .login-inputs .login-form input,
+.login-container .login-inputs .login-form label {
+  width: inherit;
+  margin-top: 10px;
+}
+.login-container .login-inputs .login-form input[type="text"],[type="password"]{
+  outline: none;
+  border: none;
+  height: 53px;
+  border-radius: 6px;
+  padding-inline: 10px;
+  color: var(--form_bgColor);
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 3px inset;
+}
+.login-container .login-inputs .login-form .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login-container .login-inputs .login-form .checkbox {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+.login-container .login-inputs .login-form .login-button {
+  background-color: #4c3585;
+  color: var(--white_color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 35px;
+  font-size: 24px;
+  padding-block: 10px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.login-container .svg-images {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+.login-container .svg-images .beam_img,
+.login-container .svg-images .bg_opacity_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.login-container .svg-images .bg_opacity_img {
+  opacity: 0.9;
+}
+.login-container .svg-images .logo-text {
+  z-index: 2;
+}
+.login-container .svg-images .icons-container {
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  color: var(--white_color);
+  align-items: center;
+  padding-block: 26px;
+}
+.login-container .svg-images .icons-container .envaglo-link{
+  text-decoration: none;
+  color: var(--white_color);
+}
+.login-container .svg-images .icons {
+  color: var(--white_color);
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.login-container .svg-images .icons i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--white_color);
+  padding: 3px;
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+.login-container .svg-images .icons i:hover {
+  color: #2f224d;
+  background-color: var(--white_color);
+  transition: 0.5s;
+}
+.login-container .svg-images .images {
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.login-container .svg-images .images .small {
+  display: none;
+}
+.login-container .marketing {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .login-container {
+    background-image: url("./assets/wep/background.svg"),
+      linear-gradient(rgba(21, 10, 49, 0.95), rgba(76, 53, 133, 0.95)),
+      url("./assets/iphon/Mask\ Group\ 7.jpg");
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .login-container {
+    background-image: url("./assets/wep/background.svg"),
+      linear-gradient(rgba(21, 10, 49, 0.95), rgba(76, 53, 133, 0.95)),
+      url("./assets/ipad-2/Mask\ Group\ 5.jpg");
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1400px) {
+  .login-container .svg-images .logo-text {
+    min-width: 350px !important;
+    max-width: 430px !important;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .login-container .svg-images .images .small {
+    display: block;
+    margin-top: 50px;
+  }
+  .login-container .svg-images .images .web {
+    display: none;
+  }
+  .login-container .svg-images {
+    height: 300px;
+  }
+  .login-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .login-container h1 {
+    font-size: 26px !important;
+  }
+  .login-inputs {
+    background-color: transparent !important;
+    width: 100% !important;
+    padding: 5px 20px !important;
+  }
+  .login-container .login-inputs .login-form input {
+    height: 35px !important;
+    padding-block: 8px !important;
+    font-size: 15px;
+  }
+  .login-container .login-inputs .login-form button {
+    height: 41px !important;
+    font-size: 14px !important;
+  }
+  .login-container .login-inputs .login-form {
+    padding: 20px !important;
+    max-width: 420px;
+  }
+  .login-container .svg-images .logo-text {
+    max-width: 230px !important;
+  }
+  .login-container .marketing {
+    display: block;
+    color: var(--white_color);
+    text-align: center;
+    width: 100%;
+    margin-block: 20px;
+    text-transform: uppercase;
+  }
+  .login-container .login-inputs .login-form input,
+  .login-container .login-inputs .login-form label {
+    font-size: 16px;
+  }
+  .svg-images .icons-container {
+    display: none !important;
+  }
+}
